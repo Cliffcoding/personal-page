@@ -24,6 +24,19 @@ html, body {
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  display: grid;
+}
+
+.nav-section {
+  max-width: 60%;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  font-size: 2.5em;
+}
+
+.links {
+  padding: 0 10%;
 }
 
 
@@ -39,7 +52,7 @@ html, body {
 .vertical-align {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
 }
 
 .img-fit {
@@ -54,38 +67,49 @@ html, body {
   margin-top: 10%;
 }
 
+.links {
+  padding-top: 10%;
+}
+
+.link {
+  padding: 0 3%;
+}
+
+a:visited, a {
+  color: white;
+  text-decoration: none;
+}
+
 
 /*  ---PROJECTS--- */
 
-
-.projects-container {
-  display: grid;
-  grid-gap: 5%;
-  grid-template-columns: repeat(5, [col] 1fr);
-  grid-template-rows: repeat(2, [row] auto);
-}
-
-.project {
-  padding-top: 20%;
+.hexagon-image {
+  height: 130%;
+  width: 130%;
+  object-fit: cover;
+  object-position: 20 -20;
 }
 
 .project-image-one {
-  grid-column: col 1 / span  1;
-  grid-row: row ;
+  grid-column: col 1 / span 1;
+  grid-row: row;
 }
 
 .project-image-two {
-  grid-column: col 5 / span  1 ;
-  grid-row: row 2 ;
+  grid-column: col 5 / span 1;
+  grid-row: row 2;
 }
+
 .project-description-one, .project-description-two {
   text-align: center;
-    justify-self: center;
+  justify-self: center;
 }
+
 .project-description-one {
-  grid-column: col 2 / span  3 ;
+  grid-column: col 2 / span 3;
   grid-row: row;
 }
+
 .project-description-two {
   grid-column: col 1 / span 4;
   grid-row: row 2;
@@ -93,17 +117,133 @@ html, body {
 
 .projects-section {
   height: 130vh;
-  background: rgb(18, 18, 18);
   margin-top: 5%;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: -6%;
+}
+.projects {
+  background: rgb(18, 18, 18);
   -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 }
-.projects-header {
-  text-align: center;
-  margin-bottom: -7%;
+.grid-layout {
+  width: 75vw;
+  margin: -5vw auto 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(16, 5vw);
+  grid-template-rows: repeat(9, 9vw);
+  padding-top: 10%;
 }
-.project-image {
-  height: 30vh;
-  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
-  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+
+.view {
+  background: rgb(25, 25, 25);
+  width: 20vw;
+  height: 18vw;
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  grid-area: span 2 / span 4;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.view:nth-child(2n+1) {
+  margin-top: 9vw;
+}
+
+.view:nth-child(2n) {
+  margin-left: -5vw;
+}
+
+.view:nth-child(4n+3) {
+  margin-left: -10vw;
+}
+
+.view:nth-child(4n+4) {
+  margin-left: -15vw;
+}
+
+.view .mask, .view .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.view h2 {
+  text-transform: uppercase;
+  color: #fff;
+  /*text-align: center;*/
+  position: relative;
+  font-size: 17px;
+  padding: 3%;
+  background: rgba(0, 0, 0, 0.8);
+  margin-top: 7%;
+}
+
+.view .description {
+  padding-top: 3%;
+}
+
+.view p {
+  padding: 1%;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  position: relative;
+  color: #fff;
+  /*text-align: center;*/
+}
+
+.view .mask {
+  background-color: rgba(143, 181, 183, 0.7);
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  width: 25vw;
+  padding: 60px;
+  height: 29vh;
+  opacity: 0;
+  transform: translate(265px, 145px) rotate(45deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.view h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  transform: translate(-210px, -210px);
+  transition: all 0.2s ease-in-out;
+}
+
+.view p {
+  transform: translate(-108%, 108%);
+  transition: all 0.2s ease-in-out;
+}
+
+.view:hover .mask {
+  opacity: 1;
+  transform: translate(-10%, -20%) rotate(180deg);
+}
+
+.view:hover h2 {
+  transform: translate(0px, 0px);
+  transition-delay: 0.3s;
+}
+
+.view:hover p {
+  transform: translate(0px, 0px);
+  transition-delay: 0.4s;
+}
+
+.resume-color {
+  background-color: rgb(143, 181, 183);
+}
+
+.description {
+  margin: 0 10%;
 }

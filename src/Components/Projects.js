@@ -7,30 +7,59 @@ class Projects extends Component {
     return (
       <div>
         <h1 className="projects-header">Projects!</h1>
-        <article className="projects-section">
-        <div className="container">
-          <section className="project project-image-left projects-container">
-              <img className="project-image project-image-one" src={pictureOne} alt="macro-man-thumbnail" />
-              <div className="project-description-one">
-                <h2>MacroMan</h2>
-                <p>A calorie tracker that allows users to enter their macronutrients and track the amount of calories they can consume.</p>
-                <small>Technologies used: jQuery, JavaScript, Firebase, Materialize, Git, GitHub, HTML5, CSS3</small>
-              </div>
-
-            </section>
-          </div>
-          <div className="container">
-            <section className="project-image-right projects-container project">
-            <div className="project-description-two">
-              <h2>Jello</h2>
-              <p>Jello is an tracker board that allows a user or team to implement an agile workflow into their project.</p>
-              <small>PostgreSQL, Knex.js, Express, JWT, Firebase, Git, Github, node.js, jQuery, JavaScript, HTML5, CSS3</small>
+        <div className="projects">
+          <div className="grid-layout">
+            <div className="view">
+              <img className="hexagon-image" src={pictureOne} alt="macro-man-thumbnail" />
+                <div className="mask"></div>
+                <div className="content">
+                  <h2>MacroMan</h2>
+                  <p className="description">A calorie tracker that allows users to enter their macronutrients and track the amount of calories they can consume.</p>
+                  <p>Built with</p>
+                  <p>jQuery, JavaScript, Firebase, Materialize, Git, GitHub, HTML5, CSS3</p>
+                </div>
             </div>
-              <img className="project-image project-image-two" src={pictureTwo} alt="jello-thumbnail"/>
-            </section>
+            <div className="view resume-color"></div>
+            <div className="view resume-color">
+            <img className="hexagon-image" src={pictureTwo} alt="jello-thumbnail"/>
+              <div className="mask"></div>
+              <div className="content">
+                <h2>Jello</h2>
+                <p className="description">Jello is an tracker board that allows a user or team to implement an agile workflow into their project.</p>
+                <p>Built with</p>
+                <p className="description">PostgreSQL, Knex.js, Express, JWT, Firebase, Git, Github, node.js, jQuery, JavaScript, HTML5, CSS3</p>
+              </div>
+            </div>
+            <div className="view"></div>
+            <div className="view resume-color"></div>
+            <div className="view"></div>
+            <div className="view"></div>
+            <div className="view resume-color"></div>
+            <div className="view"></div>
+            <div className="view">
+              <img className="hexagon-image" src={pictureTwo} alt="jello-thumbnail"/>
+                <div className="mask"></div>
+                <div className="content">
+                  <h2>Jello</h2>
+                  <p className="description">Jello is an tracker board that allows a user or team to implement an agile workflow into their project.</p>
+                  <p>Built with</p>
+                  <p className="description">PostgreSQL, Knex.js, Express, JWT, Firebase, Git, Github, node.js, jQuery, JavaScript, HTML5, CSS3</p>
+                </div>
+            </div>
+            <div className="view resume-color"></div>
+            <div className="view">
+            <img className="hexagon-image" src={pictureTwo} alt="jello-thumbnail"/>
+              <div className="mask"></div>
+              <div className="content">
+                <h2>Jello</h2>
+                <p className="description">Jello is an tracker board that allows a user or team to implement an agile workflow into their project.</p>
+                <p>Built with</p>
+                <p className="description">PostgreSQL, Knex.js, Express, JWT, Firebase, Git, Github, node.js, jQuery, JavaScript, HTML5, CSS3</p>
+              </div>
+            </div>
           </div>
-        </article>
       </div>
+    </div>
     );
   }
 }

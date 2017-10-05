@@ -7,6 +7,10 @@ class Home extends Component {
     return (
       <div>
         <div className="jumbotron">
+          <div className="nav-section">
+            <a className="links" href="">About me!</a>
+            <a className="links" href="">Projects</a>
+          </div>
         </div>
         <AboutMe />
         <Projects />
